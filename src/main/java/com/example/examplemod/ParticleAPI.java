@@ -18,7 +18,8 @@ public class ParticleAPI implements Runnable {
 	}
 	
 	public void setDigitalPin(String pinToSet, String value) {
-		(new Thread(new ParticleAPI("digitalPin", "set," + pinToSet + "," + value))).start();
+		System.out.println(pinToSet);
+		(new Thread(new ParticleAPI("digitalPin", "set,D" + pinToSet + "," + value))).start();
 	}
 	
 	public void run() {
